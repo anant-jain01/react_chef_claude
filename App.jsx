@@ -1,6 +1,10 @@
 import Header from "./compoenents/Header.jsx";
-export default function App(){
+import Main from "./compoenents/Main.jsx";
+export default function App() {
   return (
-    <Header/>
+    <>
+      <Header />
+      <Main />
+    </>
   );
-};
+}
