@@ -1,22 +1,19 @@
 import { useState } from "react";
 export default function Main() {
-  const ingredients = [];
-  
-  
-  const perform = ingredients.map((data) => {
-    return <li key="used">{data}</li>;
-  });
-  
-  
-  function submit(event) { 
+  const [ingredients, setingredients] = useState([]);
+
+  function submit(event) {
     event.preventDefault();
     console.log("submitted");
     const formData = new FormData(event.currentTarget);
     const newIngredient = formData.get("ingredient");
-    ingredients.push(newIngredient);
+    setingredients((prev) => [...prev, newIngredient]);
   }
-  
-  
+
+  const perform = ingredients.map((data, index) => {
+    return <li key={index}>{data}</li>;
+  });
+
   return (
     <main>
       <form onSubmit={submit} className="add-ingredient-form">
