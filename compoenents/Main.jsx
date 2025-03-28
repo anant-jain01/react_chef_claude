@@ -1,16 +1,21 @@
 export default function Main() {
-  const ingredients = [];
+  const ingredients = ["panner", "oregan", "tomato"];
+  
+  
+  const perform = ingredients.map((data) => {
+    return <li key="used">{data}</li>;
+  });
+  
+  
   function submit(event) {
     event.preventDefault();
     console.log("submitted");
     const formData = new FormData(event.currentTarget);
     const newIngredient = formData.get("ingredient");
     ingredients.push(newIngredient);
-    console.log(ingredients);
   }
-  const perform = ingredients.map((data) => {
-    return <li key="used">{data}</li>;
-  });
+  
+  
   return (
     <main>
       <form onSubmit={submit} className="add-ingredient-form">
