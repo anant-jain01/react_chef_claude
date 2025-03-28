@@ -1,3 +1,4 @@
+import { useState } from "react";
 export default function Main() {
   const ingredients = ["panner", "oregan", "tomato"];
   
@@ -7,7 +8,7 @@ export default function Main() {
   });
   
   
-  function submit(event) {
+  function submit(event) { 
     event.preventDefault();
     console.log("submitted");
     const formData = new FormData(event.currentTarget);
