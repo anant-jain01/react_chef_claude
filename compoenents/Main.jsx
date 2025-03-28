@@ -1,4 +1,8 @@
 export default function Main() {
+  const ingredients=["panner",'oregan','tomato'];
+  const perform=ingredients.map((data)=>{
+    return <li key="used">{data}</li>
+  });
   return (
     <main>
       <form className="add-ingredient-form">
@@ -9,6 +13,7 @@ export default function Main() {
         />
         <button>Add Ingredient</button>
       </form>
+      <ul>{perform}</ul>
     </main>
   );
 }
