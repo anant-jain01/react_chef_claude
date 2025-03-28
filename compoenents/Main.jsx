@@ -1,6 +1,6 @@
 import { useState } from "react";
 export default function Main() {
-  const ingredients = ["panner", "oregan", "tomato"];
+  const ingredients = [];
   
   
   const perform = ingredients.map((data) => {
