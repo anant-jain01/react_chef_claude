@@ -4,7 +4,6 @@ export default function Main() {
 
   function submit(event) {
     event.preventDefault();
-    console.log("submitted");
     const formData = new FormData(event.currentTarget);
     const newIngredient = formData.get("ingredient");
     setingredients((prev) => [...prev, newIngredient]);
