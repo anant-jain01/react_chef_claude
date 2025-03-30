@@ -1,7 +1,7 @@
 import React from "react";
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
-
+import getRecipeFromMistral from "../ai";
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([
     "all the main spices",
