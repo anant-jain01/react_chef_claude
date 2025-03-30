@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Main() {
-  const [ingredients, setIngredients] = React.useState([]);
+  const [ingredients, setIngredients] = React.useState(["all the main spices", "pasta", "ground beef", "tomato paste"]);
   const [recipeShown,setRecipeShown]=React.useState(false);
   const ingredientsListItems = ingredients.map((ingredient) => (
     <li key={ingredient}>{ingredient}</li>
@@ -35,10 +35,10 @@ export default function Main() {
             <h3>Ready for a recipe?</h3>
             <p>Generate a recipe from your list of ingredients.</p>
           </div>
-          <button>Get a recipe</button>
+          <button onClick={changeRecipe}>{recipeShown? "Hide the recipe" :"Get a recipe"}</button>
         </div>}
       </section>}
-      <section>
+      {recipeShown &&<section>
     <h2>Chef Claude Recommends:</h2>
     <article className="suggested-recipe-container" aria-live="polite">
         <p>Based on the ingredients you have available, I would recommend making a simple a delicious <strong>Beef Bolognese Pasta</strong>. Here is the recipe:</p>
@@ -69,7 +69,7 @@ export default function Main() {
             <li>Serve hot, garnished with additional fresh basil or grated Parmesan cheese if desired.</li>
         </ol>
     </article>
-</section>
+</section>}
     </main>
   );
 }
