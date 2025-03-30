@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function App() {
+function Trial() {
   return (
     <section>
       <h1>Signup form</h1>
