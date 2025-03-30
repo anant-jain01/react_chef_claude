@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-/**
- * Challenge: add another label and input for the password field
- */
-
 function App() {
   return (
     <section>
